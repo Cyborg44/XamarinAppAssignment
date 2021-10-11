@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAppAssignment.LoginPage"
+             BackgroundColor="#112B47">
+
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+            <Image Source="logo.png" WidthRequest="200" HeightRequest="200" Margin="10"></Image>
+
+            <Label Text="Login" HorizontalOptions="Center" TextColor="White" FontSize="40" FontFamily="SacramentoRegular"></Label>
+
+            <Entry x:Name="username" Placeholder="Username" TextColor="White" FontFamily="LatoRegular" PlaceholderColor="LightGray"></Entry>
+            <Entry x:Name="password" Placeholder="Password" IsPassword="True" FontFamily="LatoRegular" TextColor="White" PlaceholderColor="LightGray"></Entry>
+            
+            <Button VerticalOptions="Center"
+                Text="Login"
+                TextTransform="None"
+                FontSize="20"
+                FontFamily="PoppinsRegular"
+                BackgroundColor="White"
+                BorderColor="ForestGreen"
+                BorderWidth="2.0"
+                CornerRadius="50"
+                Clicked="Login_Button_Clicked"
+            ></Button>
+
+            <Button
+                VerticalOptions="Center"
+                Text="Signup"
+                FontSize="20"
+                TextTransform="None"
+                FontFamily="PoppinsRegular"
+                BackgroundColor="White"
+                BorderColor="ForestGreen"
+                BorderWidth="2.0"
+                CornerRadius="50"
+                Clicked="Signup_Button_Clicked"
+                
+            ></Button>
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAppAssignment.SignupPage"
+             BackgroundColor="#112B47"
+             >
+    
+    <ContentPage.Content>
+        <StackLayout 
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"
+            Padding="20"
+            Spacing="10"
+            >
+
+            <Image  Source="logo.png" WidthRequest="50" HeightRequest="50" ></Image>
+            
+            <Label 
+                Text="SignUp" 
+               FontSize="30" 
+               FontAttributes="Bold" 
+               FontFamily="SacramentoRegular" 
+               TextColor="White"
+               HorizontalTextAlignment="Center"/>
+
+            <BoxView HeightRequest="10" BackgroundColor="Transparent">
+                
+            </BoxView>
+
+            <StackLayout>
+                <ImageButton 
+                    x:Name="resultImage" 
+                    Source="pickPhoto.png" 
+                         HeightRequest="40"
+                         HorizontalOptions="Center"
+                         WidthRequest="40"
+                    BorderWidth="2"
+                    BorderColor="ForestGreen"
+                         BackgroundColor="White" 
+                         CornerRadius="20" 
+                         Padding="5"
+                         Clicked="ImageButton_Clicked"/>
+                
+                <Label x:Name="photoName" Text="Pick a photo" FontSize="15" TextColor="White" FontFamily="LatoRegular" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            
+
+
+            <StackLayout>
+                <Entry Placeholder="First Name" 
+                       FontSize="20" 
+                       x:Name="fname"
+                       
+                       TextColor="White" FontFamily="LatoRegular" PlaceholderColor="LightGray" />
+                <Entry Placeholder="Last Name" 
+                       x:Name="lName"
+                       FontSize="20" 
+                       FontFamily="LatoRegular"
+                       TextColor="White" PlaceholderColor="LightGray"/>
+            </StackLayout>
+
+            <Entry TextColor="White" PlaceholderColor="LightGray"
+                   Placeholder="Email"
+                   x:Name="email"
+                   FontFamily="LatoRegular"
+                   Keyboard="Email" 
+                   FontSize="20" 
+                   FontAttributes="Bold"/>
+
+            <Entry TextColor="White" PlaceholderColor="LightGray"
+                   IsPassword="True" 
+                   x:Name="password"
+                   Placeholder="Password" 
+                   FontSize="20" 
+                   FontFamily="LatoRegular"/>
+            
+            <Label Text="DOB"
+                   
+                   TextColor="White"
+                   FontSize="20"
+                   FontFamily="LatoRegular"
+                   FontAttributes="Bold"/>
+            
+            <DatePicker 
+                    x:Name="dob"
+                    MinimumDate="01/01/1900" 
+                    MaximumDate="01/01/2020"/>
+            
+            <Picker Title="Select Gender" 
+                    x:Name="gender"
+                    
+                TitleColor="White"
+                FontFamily="LatoRegular">
+                <Picker.Items>
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="CenterAndExpand"
+                         
+                         Spacing="10">
+                
+                <Button Text="Back" 
+                        CornerRadius="30" 
+                        TextColor="ForestGreen"
+                        FontSize="20"
+                        TextTransform="None"
+                        FontFamily="PoppinsRegular"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="ForestGreen"
+                        BorderWidth="2"
+                        />
+                
+                <Button Text="SignUp" 
+                        FontSize="20"
+                        TextTransform="None"
+                        FontFamily="PoppinsRegular"
+                        CornerRadius="25" 
+                        HeightRequest="50" 
+                        TextColor="Black"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="ForestGreen"
+                        BorderWidth="2"
+                        Clicked="Signup_Button_Clicked"
+                        />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
